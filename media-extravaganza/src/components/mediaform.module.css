@@ -1,0 +1,70 @@
+form {
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+form img {
+    width: 50%;
+    display: block;
+}
+
+form video {
+    width: 100%;
+    display: block;
+}
+
+/* .picture {
+    background-color: green;
+}
+
+.video {
+    background-color: orange;
+} */
+
+label {
+    display: block;
+}
+
+input[type=file] {
+    display: none;
+}
+
+label{
+    cursor: pointer;
+    background-color: rgb(24, 193, 173);
+    margin-bottom: 3%;
+    margin-top: 3%;
+    width: 30%;
+    color:white;
+    padding: 2%;
+    border-radius: 10px;
+    /* padding-left: 4%; */
+    text-align: center;
+    transition: ease 0.3s;
+}
+
+label:hover{
+    background-color: rgb(9, 115, 103);
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(24, 193, 173);
+    margin-bottom: 3%;
+    margin-top: 3%;
+    color:white;
+    padding: 2% 6%;
+    border-radius: 10px;
+    border: none;
+    transition: ease 0.3s;
+}
+
+button:hover {
+    background-color: rgb(9, 115, 103);
+}
+
+.clear {
+    margin-right: 3%;
+}
