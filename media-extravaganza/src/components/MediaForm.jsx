@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './mediaform.module.css';
+import { motion } from "framer-motion";
 
 function MediaForm() {
   const [picture, setPicture] = useState(null);
@@ -60,21 +61,42 @@ function MediaForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className={styles.picture}>
+        <motion.div
+        initial={{ x: -600, scale: 1}}
+        animate={{ x: 0}}
+        transition={{ duration: 0.5 }}
+        whileTap={{ scale: 0.95 }}
+        >
         <label htmlFor="picture">
         <input type="file" id="picture" accept="image/*" onChange={handlePictureChange}/>
         Add a picture
         </label>
+        </motion.div>
         {picture && <img src={picture} alt="Uploaded picture" />}
       </div>
       <div className={styles.video}>
+        <motion.div
+        initial={{ x: -600, scale:1}}
+        animate={{ x: 0}}
+        transition={{ duration: 0.7 }}
+        whileTap={{ scale: 0.95 }}
+        >
         <label htmlFor="video">
         <input type="file" id="video" accept="video/*" onChange={handleVideoChange} />
         Add a video
         </label>
+        </motion.div>
         {video && <video src={video} controls />}
       </div>
+      <motion.div
+        initial={{ x: -600, scale:1}}
+        animate={{ x: 0}}
+        transition={{ duration: 0.6 }}
+        whileTap={{ scale: 0.95 }}
+        >
       {picture || video ? <button type="button" onClick={handleClear}  className={styles.clear}>Clear</button> : null}
       <button type="submit">Save</button>
+      </motion.div>
     </form>
   );
 }
